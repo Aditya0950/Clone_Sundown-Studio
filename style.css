@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Neuehaasdisplay roman, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #efeae3;
+}
+
+/* This is page-1 */
+
+#page-1 {
+    width: 95%;
+    margin: auto;
+    position: relative;
+}
+
+#page-1 nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 0vw;
+}
+
+#page-1 nav a>img {
+    width: 100%;
+    height: 5vw;
+}
+
+#page-1 nav #nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#page-1 nav #nav-right ul li {
+    list-style: none;
+    font-size: 1vw;
+    color: #0b0500;
+    padding: 0.5vw 1vw;
+    z-index: 9;
+}
+
+#page-1 nav #nav-right ul a {
+    text-decoration: none;
+    position: relative;
+    border-radius: 1vw;
+    outline: 0.1vw solid rgba(11, 5, 0, .2);
+    overflow: hidden;
+    z-index: 8;
+}
+
+#page-1 nav #nav-right ul a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    bottom: -110%;
+    position: absolute;
+    border-radius: 100%;
+    background-color: black;
+    z-index: -9;
+}
+
+#page-1 nav #nav-right ul a:hover::after {
+    bottom: 0%;
+    border-radius: 0%;
+    transition: cubic-bezier(0.12, 0, 0.39, 0) 0.25s;
+}
+
+#page-1 nav #nav-right ul a:hover li {
+    color: white;
+}
+
+#page-1>#main {
+    height: 33vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 0.1vw solid rgba(0, 0, 0, .2);
+    padding-bottom: 2vw;
+}
+
+#page-1>#main #left {
+    text-align: left;
+}
+
+#page-1>#main #left h2 {
+    font-size: 2vw;
+    font-weight: 500;
+    line-height: 1.75vw;
+    letter-spacing: -.15vw;
+}
+
+#page-1>#main #right {
+    text-align: right;
+}
+
+#page-1>#main #right h1 {
+    font-size: 8.5vw;
+    font-weight: 700;
+    line-height: 7vw;
+    letter-spacing: -0.1vw;
+    text-transform: uppercase;
+}
+
+#page-1>#design {
+    width: 46vw;
+    height: 36vw;
+    display: flex;
+    top: 35%;
+    right: -2.5%;
+    position: absolute;
+}
+
+#page-1>#design .circle {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: #fe330a;
+    position: absolute;
+    right: 0%;
+    filter: blur(20px);
+}
+
+#page-1>#design #circle {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    animation: circle-anime 2s ease-in-out infinite alternate;
+    background: linear-gradient(337deg, #fe330a, #ff5100, #fe330a);
+}
+
+#page-1>#design #circle1 {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    animation: circle-1anime 2s ease-in-out infinite alternate;
+}
+
+#page-1>#design #circle2 {
+    width: 90%;
+    height: 90%;
+}
+
+/* This is cirlce design animation */
+
+@keyframes circle-anime {
+    from {
+        transform: translate(0%, 5%);
+    }
+
+    to {
+        transform: translateX(-10%);
+        transform: translateY(-10%);
+    }
+}
+
+
+@keyframes circle-1anime {
+    from {
+        transform: translate(0%, 0%);
+    }
+
+    to {
+        transform: translate(-50%, 50%);
+    }
+}
+
+#page-1>video {
+    width: 100%;
+    margin: 2.5vw 0vw;
+    border-radius: 1.75vw;
+    z-index: 99;
+    position: relative;
+    border: 0%;
+}
+
+/* This is slider */
+
+#slider {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#slider::-webkit-scrollbar {
+    display: none;
+}
+
+#slider #container {
+    display: inline-block;
+    margin-bottom: 2vw;
+    animation: slide 10s linear infinite;
+}
+
+#slider #container #box {
+    display: inline-block;
+}
+
+#slider h3 {
+    display: inline-block;
+    font-size: 8vw;
+    letter-spacing: -0.5vw;
+    text-transform: uppercase;
+}
+
+#slider #circle {
+    display: inline-block;
+    width: 3.75vw;
+    height: 3.75vw;
+    margin: 1vw 2vw;
+    border-radius: 50%;
+    background-color: #fe330a;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* This is page-2 */
+
+#page-2 {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5vw;
+    position: relative;
+}
+
+#page-2>#left {
+    margin-left: 2vw;
+    margin-top: 7vw;
+    line-height: 4vw;
+    letter-spacing: -0.25vw;
+    position: relative;
+}
+
+/* This is page-2 circle design */
+
+#page-2>#left #left-circle {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 18%;
+}
+
+#left-circle #circl-1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 5%;
+    right: 5%;
+    position: relative;
+    background-color: #fe330a;
+    filter: blur(65px);
+    animation-name: left-cirlce-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#left-circle #circl-2 {
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    bottom: 5%;
+    left: 5%;
+    position: absolute;
+    transform: skew(7deg);
+    filter: blur(50px);
+    background-color: #ff5100;
+    animation-name: left-cirlce-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#left-circle #circl-3 {
+    width: 90%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: rotate(20deg);
+    position: absolute;
+    transform: skew(7deg);
+    filter: blur(65px);
+    background-color: #fe330a;
+    animation-name: left-cirlce-3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes left-cirlce-1 {
+    0% {
+        transform: translate(0%, 0%);
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: translate(25%, -25%);
+    }
+}
+
+@keyframes left-cirlce-2 {
+    0% {
+        transform: skew(0deg);
+        filter: blur(20px);
+    }
+
+    100% {
+        transform: skew(-20deg);
+        filter: blur(50px);
+    }
+}
+
+@keyframes left-cirlce-3 {
+    0% {
+        transform: skew(0deg);
+    }
+
+    100% {
+        transform: skew(-10deg);
+    }
+}
+
+/* Circle design ends */
+
+#page-2>#left h1 {
+    font-size: 4.25vw;
+    font-weight: 600;
+    position: relative;
+    z-index: 9;
+}
+
+#page-2>#right {
+    width: 20%;
+    position: relative;
+    left: 80%;
+}
+
+#page-2>#right>img {
+    width: 100%;
+    height: 12vw;
+    border-radius: 0.5vw;
+    margin-bottom: 2vw;
+}
+
+#page-2>#right p {
+    width: 95%;
+    margin: auto;
+    font-size: 0.9vw;
+}
+
+/* This is page-3 */
+
+#page-3 {
+    width: 100%;
+    margin: auto;
+}
+
+#page-3>#head {
+    width: 97%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+#page-3>#head img {
+    width: .5vw;
+    height: .5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+#page-3>#head h1 {
+    font-size: 0.95vw;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#page-3 .part {
+    height: 8.5vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#page-3 .part-hover,
+.part-hover-2 {
+    width: 100%;
+    height: 8.5vw;
+    display: none;
+    position: absolute;
+    background-color: #ff9d00;
+}
+
+#page-3 .part:hover .part-hover-2 {
+    display: block;
+    animation-name: part-hover-2;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0) 5s;
+    z-index: -9;
+}
+
+#page-3 .part:hover .part-hover {
+    display: block;
+    animation-name: part-hover;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0) 5s;
+    z-index: -9;
+}
+
+/* This is hover animation */
+
+@keyframes part-hover {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes part-hover-2 {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+#page-3 .part a {
+    height: 100%;
+    display: flex;
+    padding: 0px 1.5vw;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 0.1vw solid rgba(0, 0, 0, .2);
+}
+
+#page-3 .part h1 {
+    color: #0b0500;
+    font-size: 3.5vw;
+}
+
+#page-3 .part #left {
+    text-align: right;
+}
+
+#page-3 .part #left h2 {
+    color: #0b0500;
+    font-size: 0.9vw;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#page-3 .part #left h5 {
+    font-weight: 200;
+    color: rgba(0, 0, 0, .4);
+}
+
+#hero #projects {
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5vw;
+}
+
+#projects #box {
+    width: 10vw;
+    height: 30%;
+    overflow: hidden;
+    border-radius: 2vw;
+    outline: 0.1vw solid rgba(0, 0, 0, .2);
+}
+
+#box a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 400;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+#box a img {
+    width: 20%;
+    height: 100%;
+}
+
+#box a #Inverted {
+    width: 20%;
+    height: 100%;
+    display: none;
+}
+
+#projects a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    border-radius: 100%;
+    position: absolute;
+    background-color: black;
+}
+
+#projects a:hover::after {
+    top: 0%;
+    color: white;
+    border-radius: 0%;
+    z-index: -9;
+    transition: cubic-bezier(0.12, 0, 0.39, 0) 0.25s;
+}
+
+#projects a:hover p {
+    color: white;
+}
+
+#projects a:hover img {
+    display: none;
+}
+
+#projects a:hover #Inverted {
+    display: block;
+    margin-right: 1vw;
+}
+
+/* This is page-4 */
+
+#page-4 {
+    width: 100%;
+    height: 55vw;
+    margin-top: 7.5vw;
+}
+
+#page-4 #main {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    border-radius: 2vw;
+    background-color: black;
+}
